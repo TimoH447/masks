@@ -23,7 +23,9 @@ offset_right = 20.0
 offset_bottom = 75.5
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.484271, 0.227651, 0.0193888, 1)
+color = Color(0.49056935, 0.18958962, 0.28944176, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

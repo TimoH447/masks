@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2dwgm8g52vae"]
+[gd_scene load_steps=7 format=3 uid="uid://b2dwgm8g52vae"]
 
 [ext_resource type="Script" uid="uid://bxs33smjtfc6a" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://cjjysx3pp74mh" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://nj18oabhtnoa" path="res://assets/art/Char_1.png" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(191, 34)
@@ -178,7 +179,7 @@ color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(896, 424)
+position = Vector2(907.00006, 427.00003)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ig7tw")
 metadata/_edit_group_ = true
@@ -186,10 +187,13 @@ metadata/_edit_group_ = true
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -100)
 
-[node name="ColorRect" type="ColorRect" parent="Player"]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(20, 20)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_1bvp3")
