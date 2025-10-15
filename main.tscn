@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2dwgm8g52vae"]
+[gd_scene load_steps=13 format=3 uid="uid://b2dwgm8g52vae"]
 
 [ext_resource type="Script" uid="uid://bxs33smjtfc6a" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://dn8r3s1qq67hl" path="res://fire_mask.gd" id="3_7mycd"]
-[ext_resource type="Script" uid="uid://b2jmfwnrc0e3i" path="res://climb_mask.gd" id="4_lquwl"]
+[ext_resource type="Script" path="res://climb_mask.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dvvy7t7m0fjne" path="res://player.tscn" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://light_ball_512.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://assets/light_ball_512.png" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bw1xl122rlay" path="res://scenes/ui/global_dialog.tscn" id="7_272bh"]
 
 [sub_resource type="Resource" id="Resource_5vw27"]
 script = ExtResource("3_7mycd")
@@ -30,10 +31,12 @@ script = ExtResource("1_h2yge")
 [node name="Totem" parent="." instance=ExtResource("3_1bvp3")]
 position = Vector2(323, 463)
 mask = SubResource("Resource_5vw27")
+dialog_key = "fire_totem"
 
 [node name="Totem2" parent="." instance=ExtResource("3_1bvp3")]
 position = Vector2(394, -497)
 mask = SubResource("Resource_272bh")
+dialog_key = "forrest_totem"
 
 [node name="TestPlatform7" type="StaticBody2D" parent="."]
 position = Vector2(420, -23)
@@ -284,3 +287,6 @@ texture_scale = 2.2
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(228, -799)
+
+[node name="GlobalDialog" parent="." instance=ExtResource("7_272bh")]
+scene_text_file = "res://assets/dialog.json"

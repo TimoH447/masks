@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw1xl122rlay"]
+
+[ext_resource type="Script" uid="uid://cp2jd7lmhl2rc" path="res://scenes/ui/global_dialog.gd" id="1_g4j02"]
+[ext_resource type="Texture2D" uid="uid://cik7c1htruuvm" path="res://assets/dialog_box1.png" id="2_yp1m6"]
+
+[node name="GlobalDialog" type="CanvasLayer"]
+script = ExtResource("1_g4j02")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -355.0
+offset_top = 100.0
+offset_right = 355.0
+offset_bottom = 391.0
+grow_horizontal = 2
+texture = ExtResource("2_yp1m6")
+region_rect = Rect2(6.82104, 6.30104, 18.0587, 18.445)
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Here is some default text that will be replaced"
