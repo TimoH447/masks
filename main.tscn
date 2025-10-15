@@ -1,23 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2dwgm8g52vae"]
+[gd_scene load_steps=12 format=3 uid="uid://b2dwgm8g52vae"]
 
 [ext_resource type="Script" uid="uid://bxs33smjtfc6a" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="Script" uid="uid://cjjysx3pp74mh" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://dn8r3s1qq67hl" path="res://fire_mask.gd" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://b2jmfwnrc0e3i" path="res://climb_mask.gd" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dvvy7t7m0fjne" path="res://player.tscn" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://light_ball_512.png" id="6_7mycd"]
+
+[sub_resource type="Resource" id="Resource_5vw27"]
+script = ExtResource("3_7mycd")
+metadata/_custom_type_script = "uid://dn8r3s1qq67hl"
+
+[sub_resource type="Resource" id="Resource_272bh"]
+script = ExtResource("4_lquwl")
+metadata/_custom_type_script = "uid://b2jmfwnrc0e3i"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(191, 34)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
-size = Vector2(40, 40)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7mycd"]
+polygon = PackedVector2Array(-90, -19.9091, 100, -20, 95, 19.7273, -95, 19.8182)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_272bh"]
+polygon = PackedVector2Array(-94.7565, -18.3119, 95.5213, -19.7399, 95.9631, 19.0798, -94.7159, 18.4569)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_h2yge")
 
 [node name="Totem" parent="." instance=ExtResource("3_1bvp3")]
 position = Vector2(323, 463)
+mask = SubResource("Resource_5vw27")
 
 [node name="Totem2" parent="." instance=ExtResource("3_1bvp3")]
 position = Vector2(394, -497)
+mask = SubResource("Resource_272bh")
 
 [node name="TestPlatform7" type="StaticBody2D" parent="."]
 position = Vector2(420, -23)
@@ -67,7 +83,7 @@ offset_bottom = 20.0
 color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="TestPlatform6" type="StaticBody2D" parent="."]
+[node name="TestPlatform6" type="StaticBody2D" parent="." groups=["wall_jump"]]
 position = Vector2(21, 428)
 scale = Vector2(0.2, 6)
 metadata/_edit_group_ = true
@@ -82,6 +98,25 @@ offset_right = 96.0
 offset_bottom = 20.0
 color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform13" type="StaticBody2D" parent="." groups=["wall_jump"]]
+position = Vector2(1130, 28)
+scale = Vector2(0.2, 11)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlatform13"]
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="ColorRect" type="ColorRect" parent="TestPlatform13"]
+offset_left = -95.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 20.0
+color = Color(0.0971816, 0.20146, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="TestPlatform13"]
+occluder = SubResource("OccluderPolygon2D_7mycd")
 
 [node name="TestPlatform5" type="StaticBody2D" parent="."]
 position = Vector2(308, 246)
@@ -99,8 +134,8 @@ color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="TestPlatform10" type="StaticBody2D" parent="."]
-position = Vector2(93, 481)
-rotation = 0.801106
+position = Vector2(108, 509)
+rotation = 0.417134
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlatform10"]
@@ -162,6 +197,45 @@ offset_bottom = 20.0
 color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="TestPlatform11" type="StaticBody2D" parent="."]
+position = Vector2(1669, 347)
+rotation = -0.383972
+scale = Vector2(6, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlatform11"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="ColorRect" type="ColorRect" parent="TestPlatform11"]
+offset_left = -95.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 20.0
+color = Color(0.0971816, 0.20146, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform12" type="StaticBody2D" parent="."]
+position = Vector2(1644, -362)
+rotation = -0.383972
+scale = Vector2(6, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlatform12"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="ColorRect" type="ColorRect" parent="TestPlatform12"]
+offset_left = -95.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 20.0
+color = Color(0.0971816, 0.20146, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="TestPlatform12"]
+occluder = SubResource("OccluderPolygon2D_272bh")
+
 [node name="TestPlatform2" type="StaticBody2D" parent="."]
 position = Vector2(730, 398)
 metadata/_edit_group_ = true
@@ -177,19 +251,36 @@ offset_bottom = 20.0
 color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(896, 424)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("1_ig7tw")
-metadata/_edit_group_ = true
+[node name="Player" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(914, 396)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1, -100)
+position = Vector2(-16.4, -132)
+scale = Vector2(1.6, 1.6)
 
-[node name="ColorRect" type="ColorRect" parent="Player"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1794, -142)
+blend_mode = 1
+texture = ExtResource("6_7mycd")
+texture_scale = 2.2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_ig7tw")
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(1410, 6)
+blend_mode = 1
+texture = ExtResource("6_7mycd")
+texture_scale = 2.2
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(1419, 337)
+blend_mode = 1
+texture = ExtResource("6_7mycd")
+texture_scale = 2.2
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(1854, 144)
+blend_mode = 1
+texture = ExtResource("6_7mycd")
+texture_scale = 2.2
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(228, -799)
