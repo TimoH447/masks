@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8m0wms5bfh0l"
-path="res://.godot/imported/dialog_box1.png-43ae59c24ef564bb56cb87ec397ea1c5.ctex"
+uid="uid://tjj358f1fnyd"
+path="res://.godot/imported/Char_Jump_Feuer_1.png-67236fd019171a18ad4e91fdd3c40fe0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialog_box1.png"
-dest_files=["res://.godot/imported/dialog_box1.png-43ae59c24ef564bb56cb87ec397ea1c5.ctex"]
+source_file="res://assets/sprites/player/fire_mask/Char_Jump_Feuer_1.png"
+dest_files=["res://.godot/imported/Char_Jump_Feuer_1.png-67236fd019171a18ad4e91fdd3c40fe0.ctex"]
 
 [params]
 
