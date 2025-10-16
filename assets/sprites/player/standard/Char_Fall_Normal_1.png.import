@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl2ohhuff3esk"
-path="res://.godot/imported/Char_Charge_Feuer_1.png-9ce8389a5bcb29e79c1ece59b85e328c.ctex"
+uid="uid://1r8s72yoy1pt"
+path="res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/fire_mask/Char_Charge_Feuer_1.png"
-dest_files=["res://.godot/imported/Char_Charge_Feuer_1.png-9ce8389a5bcb29e79c1ece59b85e328c.ctex"]
+source_file="res://assets/sprites/player/standard/Char_Fall_Normal_1.png"
+dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"]
 
 [params]
 
