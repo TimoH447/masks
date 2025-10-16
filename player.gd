@@ -21,6 +21,11 @@ var is_wall_jump = false
 
 var has_fire_mask = false
 var current_mask
+var mask_inventory = {
+	"fire_mask": null,
+	"forrest_mask": null,
+	"air_mask": null
+}
 
 func _physics_process(delta: float) -> void:
 	if velocity.y >0:
@@ -100,14 +105,29 @@ func start_jump_cd():
 func start_stun():
 	was_high_fall = false
 	is_stunned = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	is_stunned = false
-	
+
 func totem_interaction(mask):
+	mask_inventory[mask.get_mask_name()]= mask
+	put_on_mask(mask)
+
+func put_on_mask(mask):
 	if current_mask:
 		current_mask.remove(self)
 	current_mask = mask
 	mask.apply(self)
+	
+func has_all_masks():
+	return mask_inventory["fire_mask"] and mask_inventory["air_mask"] and mask_inventory["forrest_mask"]
+	
+func remove_masks_from_inventory():
+	mask_inventory["fire_mask"] = null
+	mask_inventory["air_mask"] = null
+	mask_inventory["forrest_mask"] = null
+	current_mask.remove(self)
+	current_mask = null
+	
 	
 func is_touching_wall_jumpable() -> bool:
 	if is_on_ceiling():
@@ -115,6 +135,13 @@ func is_touching_wall_jumpable() -> bool:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
+		# check tilemaplayer property
+		if collider is TileMapLayer:
+			var tile_pos = collider.local_to_map(collision.get_position())
+			var tile_data = collider.get_cell_tile_data(tile_pos)
+			if tile_data:
+				if tile_data.get_custom_data("is_sticky_wall"):
+					return true
 		if collider.is_in_group("wall_jump"):
 			return true
 	return false

@@ -4,6 +4,9 @@ extends Mask
 var prev_jump_v
 var is_equipped = false
 
+func get_mask_name():
+	return "air_mask"
+	
 func apply(player):
 	is_equipped = true
 	prev_jump_v = player.JUMP_VELOCITY

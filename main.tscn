@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://bxs33smjtfc6a" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://dn8r3s1qq67hl" path="res://fire_mask.gd" id="3_7mycd"]
-[ext_resource type="Script" path="res://climb_mask.gd" id="4_lquwl"]
-[ext_resource type="PackedScene" uid="uid://dvvy7t7m0fjne" path="res://player.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://b2jmfwnrc0e3i" path="res://climb_mask.gd" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://assets/light_ball_512.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bw1xl122rlay" path="res://scenes/ui/global_dialog.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://c2qpikvn6rsru" path="res://scenes/world/jungle.tscn" id="8_5vw27"]
 
 [sub_resource type="Resource" id="Resource_5vw27"]
 script = ExtResource("3_7mycd")
@@ -254,13 +254,6 @@ offset_bottom = 20.0
 color = Color(0.0971816, 0.20146, 0, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(914, 396)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-16.4, -132)
-scale = Vector2(1.6, 1.6)
-
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1794, -142)
 blend_mode = 1
@@ -290,3 +283,8 @@ position = Vector2(228, -799)
 
 [node name="GlobalDialog" parent="." instance=ExtResource("7_272bh")]
 scene_text_file = "res://assets/dialog.json"
+
+[node name="Jungle" parent="." instance=ExtResource("8_5vw27")]
+position = Vector2(-1949, -424)
+
+[editable path="Totem"]
