@@ -1,8 +1,8 @@
 [gd_scene load_steps=25 format=4 uid="uid://c2qpikvn6rsru"]
 
-[ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="1_pwu1o"]
+[ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://scenes/interactables/totem.tscn" id="1_pwu1o"]
 [ext_resource type="Texture2D" uid="uid://bmaqihd7r4n8f" path="res://assets/sprites/Assets_Tiles_Test.png" id="1_qa8y3"]
-[ext_resource type="PackedScene" uid="uid://dvvy7t7m0fjne" path="res://player.tscn" id="2_14vck"]
+[ext_resource type="PackedScene" uid="uid://dvvy7t7m0fjne" path="res://scenes/player/player.tscn" id="2_14vck"]
 [ext_resource type="Script" uid="uid://c45tbg3vghxbq" path="res://air_mask.gd" id="2_b5b2t"]
 [ext_resource type="Script" uid="uid://b2jmfwnrc0e3i" path="res://climb_mask.gd" id="3_d4q1n"]
 [ext_resource type="Script" uid="uid://dn8r3s1qq67hl" path="res://fire_mask.gd" id="4_6d73b"]

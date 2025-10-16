@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://b2dwgm8g52vae"]
 
 [ext_resource type="Script" uid="uid://bxs33smjtfc6a" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://totem.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://clld7e8iwr2r2" path="res://scenes/interactables/totem.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://dn8r3s1qq67hl" path="res://fire_mask.gd" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://b2jmfwnrc0e3i" path="res://climb_mask.gd" id="4_lquwl"]
-[ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://assets/light_ball_512.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://assets/sprites/light_ball_512.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bw1xl122rlay" path="res://scenes/ui/global_dialog.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://c2qpikvn6rsru" path="res://scenes/world/jungle.tscn" id="8_5vw27"]
 
