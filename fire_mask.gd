@@ -4,6 +4,9 @@ extends Mask
 var prev_jump_v
 var is_equipped = false
 
+func get_mask_name():
+	return "fire_mask"
+	
 func apply(player):
 	is_equipped = true
 	player.has_fire_mask = true

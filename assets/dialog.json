@@ -1,8 +1,14 @@
 {
+	"no_mask": "You have already collected the mask.",
 	"fire_totem": "This is the fire totem. 
 	The Fire Mask will give you light in the dark.",
 	"forrest_totem": "This is the forrest totem. 
 	The Mask of the Forrest allows you to hold on to some walls.",
 	"air_totem": "This is the air totem. 
-	The Air Mask will allow you to jump higher."
+	The Air Mask will allow you to jump higher.",
+	"altar_missing_mask": "You haven't found every mask, come back once you 
+	have the fire, air and forrest mask.",
+	"giving_masks_to_altar": "As a gift for the gods you place the fire, air and forrest mask 
+	onto the stands.",
+	"completed_altar": "Congratulations! Your gift of the masks will honor the gods."
 }
