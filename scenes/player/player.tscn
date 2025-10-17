@@ -101,6 +101,49 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ioxgp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"channel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kvlxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uf5tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lgqa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ydkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3j4b4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stunned",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
 floor_max_angle = 0.181514
 script = ExtResource("1_dovo2")
