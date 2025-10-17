@@ -2,24 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1r8s72yoy1pt"
-path="res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"
+uid="uid://becb00epj4i1d"
+path="res://.godot/imported/Char_Fall_Normal_1.png-bfde3b93dc2e3cdc83d35e734bc4735c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/standard/Char_Fall_Normal_1.png"
-dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"]
+source_file="res://assets/sprites/player/fire_mask/Char_Fall_Normal_1.png"
+dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-bfde3b93dc2e3cdc83d35e734bc4735c.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/uastc_level=0
-compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -27,10 +25,6 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/channel_remap/red=0
-process/channel_remap/green=1
-process/channel_remap/blue=2
-process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
