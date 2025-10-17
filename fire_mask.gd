@@ -10,9 +10,9 @@ func get_mask_name():
 func apply(player):
 	is_equipped = true
 	player.has_fire_mask = true
-	player.get_node("PointLight2D").enabled = true
+	
 	
 func remove(player):
 	if is_equipped:
 		player.has_fire_mask = false
-		player.get_node("PointLight2D").enabled = false
+		

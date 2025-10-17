@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byy44tjc3rdc"
-path="res://.godot/imported/gamedev_masks.png-f69fd4ed2d77c41b821393a4a52937cd.ctex"
+uid="uid://hw2p2ypns05l"
+path="res://.godot/imported/cave_tiles.png-b2bc24b587f8a8e3ad65260c815b9ab7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/gamedev_masks.png"
-dest_files=["res://.godot/imported/gamedev_masks.png-f69fd4ed2d77c41b821393a4a52937cd.ctex"]
+source_file="res://assets/sprites/cave_tiles.png"
+dest_files=["res://.godot/imported/cave_tiles.png-b2bc24b587f8a8e3ad65260c815b9ab7.ctex"]
 
 [params]
 
