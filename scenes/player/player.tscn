@@ -1,29 +1,114 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvvy7t7m0fjne"]
+[gd_scene load_steps=16 format=3 uid="uid://dvvy7t7m0fjne"]
 
 [ext_resource type="Script" uid="uid://cjjysx3pp74mh" path="res://scenes/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://ckn68jupptwrt" path="res://assets/sprites/player/standard/Char_Charge_1.png" id="2_fm80t"]
 [ext_resource type="Texture2D" uid="uid://evusddhj5y6o" path="res://assets/sprites/light_ball_512.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://tm4qlj83e5yk" path="res://assets/sprites/player/standard/Char_Normal_1.png" id="3_gx1jg"]
+[ext_resource type="Texture2D" uid="uid://1r8s72yoy1pt" path="res://assets/sprites/player/standard/Char_Fall_Normal_1.png" id="4_ugbui"]
+[ext_resource type="Texture2D" uid="uid://c3lc48g0hbscf" path="res://assets/sprites/player/standard/Char_Jump_Normal_1.png" id="5_fcs02"]
+[ext_resource type="Texture2D" uid="uid://dr2j8ir1tikh5" path="res://assets/sprites/player/standard/Char_Liegen_Normal_1.png" id="6_myrg7"]
+[ext_resource type="Texture2D" uid="uid://dj7byq52wx1be" path="res://assets/sprites/player/fire_mask/Char_Feuer_1.png" id="8_kvlxm"]
+[ext_resource type="Texture2D" uid="uid://cl2ohhuff3esk" path="res://assets/sprites/player/fire_mask/Char_Charge_Feuer_1.png" id="9_uf5tr"]
+[ext_resource type="Texture2D" uid="uid://tjj358f1fnyd" path="res://assets/sprites/player/fire_mask/Char_Jump_Feuer_1.png" id="10_lgqa7"]
+[ext_resource type="Texture2D" uid="uid://becb00epj4i1d" path="res://assets/sprites/player/fire_mask/Char_Fall_Normal_1.png" id="11_8ydkj"]
+[ext_resource type="Texture2D" uid="uid://eturuhhsbu66" path="res://assets/sprites/player/fire_mask/Char_Liegen_Feuer_1.png" id="12_3j4b4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yj68g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fm80t")
+}],
+"loop": true,
+"name": &"channel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gx1jg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ugbui")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fcs02")
+}],
+"loop": true,
+"name": &"jump_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_myrg7")
+}],
+"loop": true,
+"name": &"stunned",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ioxgp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"channel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kvlxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uf5tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lgqa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ydkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3j4b4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stunned",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 floor_max_angle = 0.181514
 script = ExtResource("1_dovo2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedStandard" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yj68g")
+animation = &"stunned"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_onrkg")
@@ -31,3 +116,7 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 enabled = false
 texture = ExtResource("2_onrkg")
+
+[node name="AnimatedFire" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ioxgp")
+animation = &"stunned"
