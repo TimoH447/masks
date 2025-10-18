@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b52l7s1mcb3vc"
-path="res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"
+uid="uid://ina1eywms1io"
+path="res://.godot/imported/vulcano_tiles.png-d27a791537434d9302d77bad48421fef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/standard/Char_Fall_Normal_1.png"
-dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"]
+source_file="res://assets/sprites/vulcano_tiles.png"
+dest_files=["res://.godot/imported/vulcano_tiles.png-d27a791537434d9302d77bad48421fef.ctex"]
 
 [params]
 

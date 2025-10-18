@@ -87,11 +87,12 @@ func get_animation():
 	if !is_stunned and !channeling:
 		animation_key = "default"
 		if is_on_floor() and velocity.x != 0:
-			#animation= "run"
+			animation_key= "run"
 			animation.flip_h = velocity.x >0
 		elif !is_on_floor():
 			animation_key = "jump_up"
 	animation.animation = animation_key
+	animation.play()
 
 func can_channel_jump():
 	if is_wall_jumping:

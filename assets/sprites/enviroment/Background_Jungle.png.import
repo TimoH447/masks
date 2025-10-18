@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b52l7s1mcb3vc"
-path="res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"
+uid="uid://ga7rehr44h00"
+path="res://.godot/imported/Background_Jungle.png-11321473e3c0091fdff2d1fefa249a7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/standard/Char_Fall_Normal_1.png"
-dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"]
+source_file="res://assets/sprites/enviroment/Background_Jungle.png"
+dest_files=["res://.godot/imported/Background_Jungle.png-11321473e3c0091fdff2d1fefa249a7a.ctex"]
 
 [params]
 

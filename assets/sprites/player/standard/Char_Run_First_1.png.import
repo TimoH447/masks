@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b52l7s1mcb3vc"
-path="res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"
+uid="uid://b75q3hx7b31ux"
+path="res://.godot/imported/Char_Run_First_1.png-4ed3c0b80d04f13d299f197bb6f2702a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/standard/Char_Fall_Normal_1.png"
-dest_files=["res://.godot/imported/Char_Fall_Normal_1.png-193ad3a989be735455b75490e90753e9.ctex"]
+source_file="res://assets/sprites/player/standard/Char_Run_First_1.png"
+dest_files=["res://.godot/imported/Char_Run_First_1.png-4ed3c0b80d04f13d299f197bb6f2702a.ctex"]
 
 [params]
 

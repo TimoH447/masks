@@ -1,16 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvvy7t7m0fjne"]
+[gd_scene load_steps=17 format=3 uid="uid://dvvy7t7m0fjne"]
 
 [ext_resource type="Script" uid="uid://cjjysx3pp74mh" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://ckn68jupptwrt" path="res://assets/sprites/player/standard/Char_Charge_1.png" id="2_0owmy"]
 [ext_resource type="Texture2D" uid="uid://tm4qlj83e5yk" path="res://assets/sprites/player/standard/Char_Normal_1.png" id="3_qek5x"]
-[ext_resource type="Texture2D" uid="uid://1r8s72yoy1pt" path="res://assets/sprites/player/standard/Char_Fall_Normal_1.png" id="4_5gtgg"]
+[ext_resource type="Texture2D" uid="uid://b52l7s1mcb3vc" path="res://assets/sprites/player/standard/Char_Fall_Normal_1.png" id="4_5gtgg"]
 [ext_resource type="Texture2D" uid="uid://c3lc48g0hbscf" path="res://assets/sprites/player/standard/Char_Jump_Normal_1.png" id="5_h17s1"]
+[ext_resource type="Texture2D" uid="uid://b75q3hx7b31ux" path="res://assets/sprites/player/standard/Char_Run_First_1.png" id="6_gx1jg"]
 [ext_resource type="Texture2D" uid="uid://dr2j8ir1tikh5" path="res://assets/sprites/player/standard/Char_Liegen_Normal_1.png" id="6_je7p5"]
 [ext_resource type="Texture2D" uid="uid://cl2ohhuff3esk" path="res://assets/sprites/player/fire_mask/Char_Charge_Feuer_1.png" id="8_fm80t"]
 [ext_resource type="Texture2D" uid="uid://dj7byq52wx1be" path="res://assets/sprites/player/fire_mask/Char_Feuer_1.png" id="9_gx1jg"]
-[ext_resource type="Texture2D" uid="uid://becb00epj4i1d" path="res://assets/sprites/player/fire_mask/Char_Fall_Normal_1.png" id="10_ugbui"]
+[ext_resource type="Texture2D" uid="uid://csqf0uwub6akv" path="res://assets/sprites/player/fire_mask/Char_Fall_Feuer_1.png" id="9_je7p5"]
 [ext_resource type="Texture2D" uid="uid://tjj358f1fnyd" path="res://assets/sprites/player/fire_mask/Char_Jump_Feuer_1.png" id="11_fcs02"]
 [ext_resource type="Texture2D" uid="uid://eturuhhsbu66" path="res://assets/sprites/player/fire_mask/Char_Liegen_Feuer_1.png" id="12_myrg7"]
+[ext_resource type="Texture2D" uid="uid://dtb1awdxujfws" path="res://assets/sprites/player/fire_mask/Char_Run_First_Feuer_1.png" id="12_ugbui"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm80t"]
 animations = [{
@@ -48,6 +50,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_gx1jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qek5x")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_je7p5")
 }],
 "loop": true,
@@ -78,7 +91,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_ugbui")
+"texture": ExtResource("9_je7p5")
 }],
 "loop": true,
 "name": &"fall",
@@ -90,6 +103,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ugbui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gx1jg")
+}],
+"loop": true,
+"name": &"run",
 "speed": 5.0
 }, {
 "frames": [{
@@ -107,6 +131,9 @@ script = ExtResource("1_dovo2")
 
 [node name="StandardAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fm80t")
+animation = &"run"
+frame = 1
+frame_progress = 0.205568
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 2.5)
@@ -115,7 +142,8 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="FireAnimation" type="AnimatedSprite2D" parent="."]
 visible = false
 sprite_frames = SubResource("SpriteFrames_kvlxm")
-animation = &"jump_up"
+animation = &"run"
+frame_progress = 0.950143
 
 [node name="AirAnimation" type="AnimatedSprite2D" parent="."]
 visible = false
