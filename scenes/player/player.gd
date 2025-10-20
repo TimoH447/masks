@@ -65,7 +65,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED*0.02)
 			
 	# Jump logic
-	if Input.is_action_pressed("ui_accept") and can_channel_jump() and !is_stunned:
+	if Input.is_action_pressed("ui_accept") and can_channel_jump() and !is_stunned and !is_jump_cooldown:
 		animation.animation = "channel"
 		channeling = true
 		jump_charge_time += delta
@@ -160,6 +160,7 @@ func remove_masks_from_inventory():
 	mask_inventory["air_mask"] = null
 	mask_inventory["forrest_mask"] = null
 	current_mask.remove(self)
+	animation.visible = false
 	animation = $StandardAnimation
 	animation.visible = true
 	current_mask = null
