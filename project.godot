@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="masks"
-run/main_scene="uid://c2qpikvn6rsru"
+run/main_scene="uid://d1b6ppuv60knj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://cutqfhj6f8sbe"
 
