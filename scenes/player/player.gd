@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		wall_jump_direction = -1 * last_direction
 		velocity.y = 0
 		velocity.x = 0
+		animation.animation = "wall_hang"
 	else:		
 		velocity += get_gravity() * delta
 		if is_jumping:
@@ -67,6 +68,8 @@ func _physics_process(delta: float) -> void:
 	# Jump logic
 	if Input.is_action_pressed("ui_accept") and can_channel_jump() and !is_stunned and !is_jump_cooldown:
 		animation.animation = "channel"
+		if is_wall_jumping:
+			animation.animation = "wall_channel"
 		channeling = true
 		jump_charge_time += delta
 	if channeling and (jump_charge_time > 1 or Input.is_action_just_released("ui_accept")) and !is_stunned and !is_jump_cooldown:
@@ -110,7 +113,7 @@ func start_jump():
 		last_direction = -1
 		
 	is_jumping = true
-	velocity.y = JUMP_VELOCITY * jump_charge_time
+	velocity.y = JUMP_VELOCITY * max(jump_charge_time,0.2)
 	if is_wall_jumping:
 		last_direction = wall_jump_direction
 		print(wall_jump_direction)
