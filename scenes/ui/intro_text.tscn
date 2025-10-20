@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5bejigt3ippk"]
+
+[ext_resource type="Script" uid="uid://dxibihbh6h4re" path="res://intro_text.gd" id="1_rxxap"]
+
+[node name="IntroText" type="CanvasLayer"]
+script = ExtResource("1_rxxap")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -411.5
+offset_top = -305.0
+offset_right = 411.5
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.294118, 0.411765, 0.184314, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.5
+offset_right = 393.5
+offset_bottom = 543.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[b]Welcome to Tiki Jump![/b] 
+You are a Tiki Warrior and want to honor the gods by finding the three Tiki masks and placing them onto the altar in the cave of the vulcano. 
+	
+	You can move with left and right arrow or A and D. To jump press space, but be careful you can't influence the jump once you are in the air.
+	
+Good luck!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 230.0
+offset_right = 24.0
+offset_bottom = 293.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

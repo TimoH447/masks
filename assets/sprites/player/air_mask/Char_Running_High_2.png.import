@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfoqjbx5cp2ql"
-path="res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"
+uid="uid://cungdpj86xjxg"
+path="res://.godot/imported/Char_Running_High_2.png-7df6b3e37421406feb097ee35d144c1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/air_mask/Char_Run_First_High_1.png"
-dest_files=["res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"]
+source_file="res://assets/sprites/player/air_mask/Char_Running_High_2.png"
+dest_files=["res://.godot/imported/Char_Running_High_2.png-7df6b3e37421406feb097ee35d144c1d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfoqjbx5cp2ql"
-path="res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"
+uid="uid://d35yg7qb8v05f"
+path="res://.godot/imported/Char_Wall_Climbing_1.png-60e0d928f5761e13ccb6c2819a90f27f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/air_mask/Char_Run_First_High_1.png"
-dest_files=["res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"]
+source_file="res://assets/sprites/player/forrest_mask/Char_Wall_Climbing_1.png"
+dest_files=["res://.godot/imported/Char_Wall_Climbing_1.png-60e0d928f5761e13ccb6c2819a90f27f.ctex"]
 
 [params]
 

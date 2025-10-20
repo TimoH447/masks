@@ -35,9 +35,8 @@ func _input(event: InputEvent) -> void:
 
 func complete_altar():
 	SignalBus.emit_signal("display_dialog","giving_masks_to_altar")
-	fire_mask.visible = true
-	air_mask.visible = true
-	forrest_mask.visible = true
+	$AltarVoll.visible = true
+	
 	
 	completed_altar = true
 	player.remove_masks_from_inventory()

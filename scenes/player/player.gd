@@ -101,6 +101,7 @@ func can_channel_jump():
 	
 func start_jump():
 	animation.animation = "jump_up"
+	$JumpSound.play()
 	start_jump_cd()
 	last_direction = 0
 	if Input.is_action_just_pressed("move_right") or Input.is_action_pressed("move_right"):
@@ -126,6 +127,7 @@ func start_jump_cd():
 	
 func start_stun():
 	animation.play("stun")
+	$StunSound.play()
 	was_high_fall = false
 	is_stunned = true
 	await get_tree().create_timer(2).timeout

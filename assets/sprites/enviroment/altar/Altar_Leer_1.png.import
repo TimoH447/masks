@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfoqjbx5cp2ql"
-path="res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"
+uid="uid://cmdu48gv0i3nm"
+path="res://.godot/imported/Altar_Leer_1.png-cb1602045f5721ab4c825ba6acc354ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/air_mask/Char_Run_First_High_1.png"
-dest_files=["res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"]
+source_file="res://assets/sprites/enviroment/altar/Altar_Leer_1.png"
+dest_files=["res://.godot/imported/Altar_Leer_1.png-cb1602045f5721ab4c825ba6acc354ec.ctex"]
 
 [params]
 

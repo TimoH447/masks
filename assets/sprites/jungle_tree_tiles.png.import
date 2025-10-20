@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfoqjbx5cp2ql"
-path="res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"
+uid="uid://dvmaoao8mr522"
+path="res://.godot/imported/jungle_tree_tiles.png-2db79035fbe6a265f1e02a430d5e4396.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/air_mask/Char_Run_First_High_1.png"
-dest_files=["res://.godot/imported/Char_Run_First_High_1.png-1e85cf72ca1c7397238d636a2a272bd8.ctex"]
+source_file="res://assets/sprites/jungle_tree_tiles.png"
+dest_files=["res://.godot/imported/jungle_tree_tiles.png-2db79035fbe6a265f1e02a430d5e4396.ctex"]
 
 [params]
 
