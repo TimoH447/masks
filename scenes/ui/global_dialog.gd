@@ -2,14 +2,16 @@ extends CanvasLayer
 
 @export_file("*.json") var scene_text_file: String
 var scene_text = {}
-@onready var text_label = $NinePatchRect/MarginContainer/RichTextLabel
+@onready var text_label = $NinePatchRect/VBoxContainer/MarginContainer/RichTextLabel
 @onready var background = $NinePatchRect
 
 var in_progress = false
+var can_close = false
 
 func _ready():
 	SignalBus.connect("display_dialog", on_display_dialog)
 	SignalBus.connect("hide_dialog", on_hide_dialog)
+	SignalBus.connect("show_message", on_show_message)
 	if scene_text_file != "":
 		var file = FileAccess.open(scene_text_file, FileAccess.READ)
 		scene_text = JSON.parse_string(file.get_as_text())
@@ -17,9 +19,26 @@ func _ready():
 	
 func on_hide_dialog():
 	background.visible = false
-	
+	in_progress = false
+
 func on_display_dialog(text_key):
 	in_progress = true
 	var text = scene_text[text_key]
 	background.visible = true
 	text_label.text = text
+	can_close = false
+	await get_tree().process_frame
+	can_close = true
+
+func on_show_message(message):
+	in_progress = true
+	background.visible = true
+	text_label.text = message
+	can_close = false
+	await get_tree().process_frame
+	can_close = true
+
+
+func _on_close_button_pressed() -> void:
+	if can_close:
+		background.visible = false

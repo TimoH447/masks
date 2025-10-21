@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://c2qpikvn6rsru"]
+[gd_scene load_steps=49 format=4 uid="uid://c2qpikvn6rsru"]
 
 [ext_resource type="Script" uid="uid://cq50eksvbfq7a" path="res://scenes/world/jungle.gd" id="1_6fx5c"]
 [ext_resource type="Texture2D" uid="uid://ga7rehr44h00" path="res://assets/sprites/enviroment/Background_Jungle.png" id="1_16aum"]
@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://ina1eywms1io" path="res://assets/sprites/vulcano_tiles.png" id="10_16aum"]
 [ext_resource type="PackedScene" uid="uid://b5bejigt3ippk" path="res://scenes/ui/intro_text.tscn" id="14_1urf1"]
 [ext_resource type="AudioStream" uid="uid://bjbqxwlkxlhrj" path="res://assets/audio/Music3.mp3" id="15_doxpv"]
+[ext_resource type="Script" uid="uid://d3tx64dwkrgor" path="res://scenes/world/canvas_layer_2.gd" id="19_1o5e4"]
 [ext_resource type="PackedScene" uid="uid://cjvk00k4408" path="res://scenes/ui/pause_menu.tscn" id="19_37nyw"]
+[ext_resource type="PackedScene" uid="uid://ba8fkxwmwlrmy" path="res://scenes/other/fail_observer.tscn" id="21_vhw6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_or527"]
 texture = ExtResource("8_or527")
@@ -658,7 +660,7 @@ tile_map_data = PackedByteArray("AAASAA0AAAABAAMAAAATAA0AAAABAAMAAAASAA4AAAABAAQ
 tile_set = SubResource("TileSet_doxpv")
 
 [node name="Player" parent="." instance=ExtResource("2_14vck")]
-position = Vector2(-423, 871)
+position = Vector2(-458, 883)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -100)
@@ -672,6 +674,13 @@ parameters/looping = true
 
 [node name="IntroText" parent="." instance=ExtResource("14_1urf1")]
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource("19_1o5e4")
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_right = 69.0
+offset_bottom = 55.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("19_37nyw")]
@@ -681,3 +690,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+
+[node name="FailObserver" parent="." instance=ExtResource("21_vhw6u")]
+position = Vector2(4160, 55.0002)
+rotation = 1.11876
+scale = Vector2(2, 7)
+fail_message = "Uff, I wouldn't want to do this again."
+trigger_count = 1
+
+[node name="FailObserver3" parent="." instance=ExtResource("21_vhw6u")]
+position = Vector2(4160, 55.0002)
+rotation = 1.11876
+scale = Vector2(2, 7)
+fail_message = "Still having fun? "
+
+[node name="FailObserver2" parent="." instance=ExtResource("21_vhw6u")]
+position = Vector2(2656, 777)
+rotation = 1.1205
+scale = Vector2(2, 7)
+fail_message = "How often do you fail this jump?! You have to jump onto the platform not the slope!"
+trigger_count = 8
+
+[node name="RageTimer" type="Timer" parent="."]
+wait_time = 600.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="RageTimer" to="." method="_on_rage_timer_timeout"]

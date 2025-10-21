@@ -25,7 +25,7 @@ func _input(event: InputEvent) -> void:
 				SignalBus.emit_signal("display_dialog", "no_mask")
 				active_dialog = true
 	elif active_dialog and event.is_action_pressed("interact"):
-		SignalBus.emit_signal("hide_dialog")
+		#SignalBus.emit_signal("hide_dialog")
 		active_dialog = false
 
 func take_mask():

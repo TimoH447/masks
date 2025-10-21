@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5bejigt3ippk"]
+[gd_scene load_steps=5 format=3 uid="uid://b5bejigt3ippk"]
 
 [ext_resource type="Script" uid="uid://dxibihbh6h4re" path="res://intro_text.gd" id="1_rxxap"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rxxap"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="InputEventKey" id="InputEventKey_1u470"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_l0aui"]
+events = [SubResource("InputEventKey_rxxap"), SubResource("InputEventKey_1u470")]
 
 [node name="IntroText" type="CanvasLayer"]
 script = ExtResource("1_rxxap")
@@ -53,6 +66,7 @@ offset_bottom = 293.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_l0aui")
 text = "X"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

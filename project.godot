@@ -27,6 +27,9 @@ window/stretch/mode="viewport"
 
 [editor]
 
+movie_writer/mjpeg_quality=0.3
+movie_writer/movie_file="C:/Users/timoh/OneDrive/Dokumente/projects/masks/dev/clips/play_through.avi"
+movie_writer/fps=75
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
